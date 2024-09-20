@@ -1,0 +1,24 @@
+.pag-inicial{
+        background-color: rgb(242, 194, 203);
+        text-align: center;
+    }
+
+body{
+    background-color: rgb(242, 194, 203);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+.botoes a{
+    text-decoration: none; /*tirar o sublinhado*/
+    color: black;
+    background-color: rgb(160, 69, 69);/*cor*/
+    font-size: larger; /*mudar tamanho*/
+    padding: 10px; /*adiciona uim camppo ao redor do texto*/
+    border-radius: 20px; /*arredondar a borda*/
+} /*EU TE AMO*/
+
+.botoes{
+    gap: 20px; /*adiciona espaço entre os botões*/
+}
