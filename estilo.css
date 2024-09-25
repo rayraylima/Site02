@@ -13,12 +13,45 @@ body{
 .botoes a{
     text-decoration: none; /*tirar o sublinhado*/
     color: black;
-    background-color: rgb(160, 69, 69);/*cor*/
+    background-color:  rgb(248, 156, 173);/*cor*/
     font-size: larger; /*mudar tamanho*/
     padding: 10px; /*adiciona uim camppo ao redor do texto*/
-    border-radius: 20px; /*arredondar a borda*/
+    border-radius: 15px; /*arredondar a borda*/
 } /*EU TE AMO*/
 
 .botoes{
     gap: 20px; /*adiciona espaço entre os botões*/
+}
+
+.caixa-de-login{
+    /*muda o fundo*/
+    background-color:  rgb(245, 217, 222);
+    /*adiciona espaço dentro*/
+    padding: 20px;
+    /*borda arredondada*/
+    border-radius: 20px;
+    /*espaço em cima (por fora)*/
+    margin: 100px;
+    width: 20%;
+    margin-top: 15%;
+}
+
+body.login{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.caixa-de-login input{
+    border-radius: 10px;
+    border: solid;
+    border-width: 1px;
+    font-size: 1.1rem;
+}
+
+a{
+    color: black;
+    text-decoration: none;
 }
