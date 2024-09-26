@@ -55,3 +55,33 @@ a{
     color: black;
     text-decoration: none;
 }
+
+.caixa-de-cadastro{
+     /*muda o fundo*/
+     background-color:  rgb(245, 217, 222);
+     /*adiciona espaço dentro*/
+     padding: 20px;
+     /*borda arredondada*/
+     border-radius: 20px;
+     /*espaço em cima (por fora)*/
+     margin: 100px;
+     width: 20%;
+     margin-top: 11%;
+    
+}
+
+    
+body.cadastro{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.caixa-de-cadastro input{
+    border-radius: 10px;
+    border: solid;
+    border-width: 1px;
+    font-size: 1.1rem;
+}
