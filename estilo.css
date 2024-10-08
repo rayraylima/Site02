@@ -85,3 +85,7 @@ body.cadastro{
     border-width: 1px;
     font-size: 1.1rem;
 }
+
+.escolher-produto{
+    display: flex;
+}
