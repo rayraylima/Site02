@@ -88,4 +88,27 @@ body.cadastro{
 
 .escolher-produto{
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.inteiro{
+    display: flex;
+    width: 100%;
+}
+
+.lateral{
+    width: 200px;
+}
+
+.lateral img{
+   width: 100%; 
+}
+
+.barra-pesquisar{
+    height: 18%;
+}
+
+.meio-topo{
+    width: 80%;
 }
