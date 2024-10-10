@@ -94,7 +94,7 @@ body.cadastro{
 
 .inteiro{
     display: flex;
-    width: 100%;
+    width: 120%;
 }
 
 .lateral{
@@ -106,9 +106,22 @@ body.cadastro{
 }
 
 .barra-pesquisar{
-    height: 18%;
+    height: 70px;
+    display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .meio-topo{
     width: 80%;
 }
+
+.barra-pesquisar input{
+    border-radius: 10px;
+    width: 60%;
+    
+}
+
+
+
+
