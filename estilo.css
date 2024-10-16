@@ -110,15 +110,68 @@ body.cadastro{
     display: flex;
 justify-content: center;
 align-items: center;
+width: 100%;
 }
 
 .meio-topo{
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .barra-pesquisar input{
     border-radius: 10px;
     width: 60%;
 }
+
+.caixa-de-pagamento{
+     /*muda o fundo*/
+     background-color:  rgb(245, 217, 222);
+     /*adiciona espaço dentro*/
+     padding: 20px;
+     /*borda arredondada*/
+     border-radius: 20px;
+     /*espaço em cima (por fora)*/
+     margin: 100px;
+     width: 10%;
+     margin-top: 15%;
+     flex-direction: column;
+     display: flex;
+     align-items: center;
+     
+}
+
+img:hover{
+    transform: scale(1.05);
+}
+
+.caixa-do-cartão{
+ /*muda o fundo*/
+ background-color:  rgb(245, 217, 222);
+ /*adiciona espaço dentro*/
+ padding: 20px;
+ /*borda arredondada*/
+ border-radius: 20px;
+ /*espaço em cima (por fora)*/
+ margin: 100px;
+ width: 20%;
+ margin-top: 11%;
+ flex-direction: column;
+ display: flex;
+ align-items: center;
+ 
+}
+
+.caixa-do-cartão input{
+    text-decoration: none; /*tirar o sublinhado*/
+    color: black;
+    background-color:  rgb(255, 223, 228);/*cor*/
+    font-size: larger; /*mudar tamanho*/
+    padding: 10px; /*adiciona uim camppo ao redor do texto*/
+    border-radius: 15px; /*arredondar a borda*/
+    border-color: black;
+}
+
 
 
