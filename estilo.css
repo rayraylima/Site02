@@ -172,6 +172,14 @@ img:hover{
     border-radius: 15px; /*arredondar a borda*/
     border-color: black;
 }
-
-
-
+body.qrcode {
+font-family: Arial, sans-serif;
+margin: 20px;
+align-items: center;
+justify-content: center;
+        
+}
+.qrcode {
+            margin-top: 20px;
+            align-items: center;
+}
