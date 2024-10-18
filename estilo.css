@@ -34,6 +34,7 @@ body{
     margin: 100px;
     width: 20%;
     margin-top: 15%;
+    
 }
 
 body.login{
@@ -182,4 +183,10 @@ justify-content: center;
 .qrcode {
             margin-top: 20px;
             align-items: center;
+}
+
+.tela-qrcode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
