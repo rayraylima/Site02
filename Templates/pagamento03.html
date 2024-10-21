@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="stylesheet" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar QR Code para Pagamento - Banco do Brasil</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+</head>
+
+<body>
+    <div class="inteiro">
+        <div class="lateral">
+            <img src="Primeiro_Raio_de_Sol__2_-removebg-preview.png" alt="">
+        </div>
+        <div class="tela-qrcode">
+
+            <h1>Gerar QR Code para Pagamento - Banco do Brasil</h1>
+            <label for="item">Escolha um item:</label>
+            <select id="item">
+                <option value="20|67890">Aliança de ouro 4k-180,00-R$</option>
+                <option value="10|12345">Aliança de prata-120,00R$</option>
+            </select>
+            <button id="gerar">Gerar QR Code</button>
+            <div id="qrcode">
+            </div>
+            <div id="link-pagamento">
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('#gerar').click(function () {
+                    var selectedItem = $('#item').val();
+                    var parts = selectedItem.split('|');
+                    var valor = parts[0];
+                    var pedido = parts[1];
+
+                    // URL de pagamento do Banco do Brasil
+                    var urlPagamento = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Te-3QFCvhi5LvAVMSYzzjoXVm2U8Xudyow&s";
+
+                    $('#qrcode').empty(); // Limpa o QR Code anterior
+                    $('#qrcode').qrcode(urlPagamento); // Gera o novo QR Code
+
+                    // Gera um link para o pagamento
+                    $('#link-pagamento').html(`<a href="${urlPagamento}" target="_blank">Clique aqui para pagar</a>`);
+                });
+            });
+        </script>
+</body>
+
+</html>
