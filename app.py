@@ -3,6 +3,14 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+# Criar lista de usuário e senha, depois vamos pegar no DB
+usuario = {
+    'admin' :  'admin' ,
+    'usuario' : 'senha' ,
+    'Rayanna' : '1906' , 
+    'Yan' : '0907' 
+}
+
 #Definindo a rota principal do site
 @app.route('/')
 def home():
@@ -11,6 +19,11 @@ def home():
 @app.route("/login1")
 def login():
     return render_template('login.html')
+
+@app.route('/cadastro')
+def home():
+    return render_template('cadastro.html')
+
 
 @app.route("/escolherproduto")
 def escolherproduto():

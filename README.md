@@ -46,4 +46,4 @@ Neste repositório está implementado o sistema "Primeiro Raio de Sol" no qual �
 ## Como executar o servidor
 
 1. Clique com o botão direito no arquivo "app.py" e
-selecione "Executar o arquivo Python no terminal"
+selecione "Executar o arquivo Python no terminal"0
