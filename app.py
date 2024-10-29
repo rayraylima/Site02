@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 # Criar lista de usuário e senha, depois vamos pegar no DB
-usuario = {
+usuarios = {
     'admin' :  'admin' ,
     'usuario' : 'senha' ,
     'Rayanna' : '1906' , 
@@ -16,12 +16,12 @@ usuario = {
 def home():
     return render_template('index.html')
 
-@app.route("/login1")
+@app.route("/login")
 def login():
     return render_template('login.html')
 
 @app.route('/cadastro')
-def home():
+def cadastro():
     return render_template('cadastro.html')
 
 
@@ -40,8 +40,24 @@ def pagamento02():
 @app.route("/pagamento03")
 def pagamento03():
     return render_template('pagamento03')
-# Parte principal do programa e Python
+
+# Verificar o Login
+@app.route('/verificar-login' , methods=['POST'])
+def verificar_login():
+
+# Pegando o que o usuário digitou no campo de entrada de user e senha
+    username = request.form['usuário']
+    password = request.form['senha']
+
+# Verifica se o usuário digitado está na lista e se a senha está certa
+    if username in usuarios and usuarios[username] == password:
+        return f"Bem-vindo, {username}!"
+    else:
+        return "Usuário ou senha inválidos"
+    
+    # Parte principal do programa e Python
 if __name__ == '__main__':
     app.run(debug=True)
+
 
 
