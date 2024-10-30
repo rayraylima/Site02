@@ -10,13 +10,14 @@ body{
 }
 
 
-.botoes a{
+.botoes a, button{
     text-decoration: none; /*tirar o sublinhado*/
     color: black;
     background-color:  rgb(248, 156, 173);/*cor*/
     font-size: larger; /*mudar tamanho*/
     padding: 10px; /*adiciona uim camppo ao redor do texto*/
     border-radius: 15px; /*arredondar a borda*/
+    border: none;
 } /*EU TE AMO*/
 
 .botoes{

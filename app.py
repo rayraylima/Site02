@@ -1,5 +1,5 @@
 # Importando a biblioteca do Flask para fazer um si 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ usuarios = {
 def home():
     return render_template('index.html')
 
-@app.route("/login")
+@app.route("/login1")
 def login():
     return render_template('login.html')
 
@@ -51,13 +51,13 @@ def verificar_login():
 
 # Verifica se o usuário digitado está na lista e se a senha está certa
     if username in usuarios and usuarios[username] == password:
-        return f"Bem-vindo, {username}!"
+        return redirect(url_for("escolherproduto"))
     else:
         return "Usuário ou senha inválidos"
     
     # Parte principal do programa e Python
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True) 
 
 
 
