@@ -31,15 +31,19 @@ def escolherproduto():
 
 @app.route("/pagamento01")
 def pagamento01():
-    return render_template('pagamento01')
+    return render_template('pagamento01.html')
 
 @app.route("/pagamento02")
 def pagamento02():
-    return render_template('pagamento02')
+    return render_template('pagamento02.html')
 
 @app.route("/pagamento03")
 def pagamento03():
-    return render_template('pagamento03')
+    return render_template('pagamento03.html')
+
+@app.route("/carrinho01")
+def carrinho01():
+    return render_template('carrinho01.html')
 
 # Verificar o Login
 @app.route('/verificar-login' , methods=['POST'])
@@ -57,7 +61,6 @@ def verificar_login():
     
     # Parte principal do programa e Python
 if __name__ == '__main__':
-    app.run(debug=True) 
-
+    app.run(debug=True)  
 
 
