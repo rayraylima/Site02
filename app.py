@@ -1,7 +1,8 @@
 # Importando a biblioteca do Flask para fazer um si 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 app = Flask(__name__)
+app.secret_key = "chave_muito_segura"
 
 # Criar lista de usuário e senha, depois vamos pegar no DB
 usuarios = {
@@ -57,10 +58,13 @@ def verificar_login():
     if username in usuarios and usuarios[username] == password:
         return redirect(url_for("escolherproduto"))
     else:
-        return "Usuário ou senha inválidos"
+        # Flash envia mensagem para o front-end
+        flash('Usuário ou senha inválidos', 'danger')
+        return redirect(url_for('login'))
     
     # Parte principal do programa e Python
 if __name__ == '__main__':
     app.run(debug=True)  
+
 
 
